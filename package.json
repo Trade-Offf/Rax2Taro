@@ -1,0 +1,30 @@
+{
+  "name": "rax2taro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trade-Offf/Rax2Taro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trade-Offf/Rax2Taro/issues"
+  },
+  "homepage": "https://github.com/Trade-Offf/Rax2Taro#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/generator": "^7.23.5",
+    "@babel/parser": "^7.23.5",
+    "@babel/traverse": "^7.23.5"
+  }
+}
