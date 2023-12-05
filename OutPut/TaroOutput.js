@@ -17,24 +17,6 @@ const App = () => {
       e.stopPropagation();
       alert("red was clicked");
     }} />
-      <View style={{
-      width: "300rpx",
-      height: "300rpx",
-      backgroundColor: "green",
-      position: "absolute",
-      top: "20rpx",
-      left: "20rpx"
-    }} onClick={() => {
-      alert("green was clicked");
-    }} />
-      <View style={{
-      width: "300rpx",
-      height: "300rpx",
-      backgroundColor: "yellow",
-      position: "absolute",
-      top: "80rpx",
-      left: "210rpx"
-    }} onClick={e => {}} />
     </View>;
 };
 render(<App />, document.body, {
