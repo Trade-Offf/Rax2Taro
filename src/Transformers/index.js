@@ -1,4 +1,3 @@
-// Transformers/index.js
 const traverse = require("@babel/traverse").default;
 const jsxElementTransformers = require("./JSXElementsTransformer");
 const functionTransformer = require("./FunctionTransformer");
