@@ -1,5 +1,7 @@
-function transformViewElement(path) {
-  // 针对 View 组件的转换逻辑
-}
+// Transformers/JSXElementsTransformer/View.js
+const { traverse, t } = require("../../../utils");
 
-module.exports = { transformViewElement };
+
+module.exports = function ViewTransformer(ast) {
+
+};

@@ -1,7 +1,7 @@
 // src/index.js
 const fs = require("fs");
 const parser = require("./parser");
-const transformer = require("../Transformers"); // 直接引入 Transform 文件夹的 index.js
+const transformer = require("./Transformers"); // 直接引入 Transform 文件夹的 index.js
 const generator = require("./generator");
 
 const sourceCode = fs.readFileSync("Input/RaxInput.js", "utf-8");
