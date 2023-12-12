@@ -1,7 +1,7 @@
 // src/Transformers/ImportsTransformer/index.js
 const t = require("@babel/types");
 
-// 定义一个映射表，用于存储组件名及其对应的新导入信息
+// 定义基础组件映射表，用于存储组件名及其对应的新导入信息
 const componentImportMap = {
   "rax-view": {
     source: "@tarojs/components",
@@ -13,6 +13,8 @@ const componentImportMap = {
   },
   // ... 添加更多组件及其转换规则
 };
+
+const taroComponentsToImport = new Set();
 
 function transformImportDeclaration(path) {
   const importSource = path.node.source.value;
@@ -26,28 +28,37 @@ function transformImportDeclaration(path) {
           specifier.imported.name === "createElement"
         )
     );
-
-    // 如果没有剩余的导入标识符，则删除整个导入声明
     if (path.node.specifiers.length === 0) {
       path.remove();
     }
   }
 
-  // 通用组件映射转换
+  // 基础组件映射转换
   const newImportInfo = componentImportMap[importSource];
   if (newImportInfo) {
-    const newImportSpecifier = t.importSpecifier(
-      t.identifier(newImportInfo.importName),
-      t.identifier(newImportInfo.importName)
+    taroComponentsToImport.add(newImportInfo.importName);
+    path.remove(); // 移除原有的导入声明
+  }
+}
+
+function addTaroImportDeclaration(ast) {
+  if (taroComponentsToImport.size > 0) {
+    const importSpecifiers = Array.from(taroComponentsToImport).map(
+      (importName) =>
+        t.importSpecifier(t.identifier(importName), t.identifier(importName))
     );
-    const newImportDeclaration = t.importDeclaration(
-      [newImportSpecifier],
-      t.stringLiteral(newImportInfo.source)
+
+    const taroImportDeclaration = t.importDeclaration(
+      importSpecifiers,
+      t.stringLiteral("@tarojs/components")
     );
-    path.replaceWith(newImportDeclaration);
+
+    // 在 AST 的开头添加 Taro 的统一导入声明
+    ast.program.body.unshift(taroImportDeclaration);
   }
 }
 
 module.exports = {
   transformImportDeclaration,
+  addTaroImportDeclaration,
 };
