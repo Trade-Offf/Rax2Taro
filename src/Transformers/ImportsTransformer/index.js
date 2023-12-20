@@ -11,6 +11,10 @@ const componentImportMap = {
     source: "@tarojs/components",
     importName: "Text",
   },
+  "rax-icon": {
+    source: "@tarojs/components",
+    importName: "Image",
+  },
   // ... 添加更多组件及其转换规则
 };
 
