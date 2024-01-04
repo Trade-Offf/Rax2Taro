@@ -15,6 +15,10 @@ const componentImportMap = {
     source: "@tarojs/components",
     importName: "Image",
   },
+  "rax-image": {
+    source: "@tarojs/components",
+    importName: "Image",
+  },
   // ... 添加更多组件及其转换规则
 };
 
@@ -23,7 +27,7 @@ const taroComponentsToImport = new Set();
 function transformImportDeclaration(path) {
   const importSource = path.node.source.value;
 
-  // 特殊处理 "rax" 模块的 createElement 导入
+  // 删除 "rax" 模块的 createElement
   if (importSource === "rax") {
     path.node.specifiers = path.node.specifiers.filter(
       (specifier) =>
