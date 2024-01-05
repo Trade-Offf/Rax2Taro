@@ -4,6 +4,7 @@ const textTransformer = require("./Text");
 const iconTransformer = require("./Icon");
 const imageTransformer = require("./Image");
 const pictureTransformer = require("./Picture");
+const videoTransformer = require("./Video");
 
 module.exports = {
   View: viewTransformer.transformViewElement,
@@ -11,5 +12,6 @@ module.exports = {
   Icon: iconTransformer.transformIconElement,
   Image: imageTransformer.transformImageElement,
   Picture: pictureTransformer.transformPictureElement,
+  Video: videoTransformer.transformVideoElement,
   // ... 导出其他组件的转换器
 };

@@ -23,6 +23,10 @@ const componentImportMap = {
     source: "@tarojs/components",
     importName: "Image",
   },
+  "rax-video": {
+    source: "@tarojs/components",
+    importName: "Video",
+  },
   // ... 添加更多组件及其转换规则
 };
 
