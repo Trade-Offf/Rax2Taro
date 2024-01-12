@@ -27,6 +27,10 @@ const componentImportMap = {
     source: "@tarojs/components",
     importName: "Video",
   },
+  "rax-textinput": {
+    source: "@tarojs/components",
+    importName: "Input,Textarea",
+  },
   // ... 添加更多组件及其转换规则
 };
 
