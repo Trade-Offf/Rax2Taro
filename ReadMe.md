@@ -1,6 +1,15 @@
-# Rax to Taro Compiler
+<p align="center">
+    <img src=https://github.com/Trade-Offf/PictureBed/blob/main/imgs/logo-2.png?raw=true width=328/>
+</p>
+<p align="center"><strong>本编译器用于将 Rax 文件转换成 Taro 文件</strong></p>
 
-此项目是一个编译器，用于将 Rax 代码转换成 Taro 代码。
+## 特征
+
+- 🚧 编译器深入挖掘 Rax 和 Taro 之间的兼容性，确保平滑的代码转换体验。
+
+- 🔨 Rax2Taro 采用模块化结构设计，通过精细处理 AST 实现代码的高效转化。
+
+- ⏳ 自动化测试确保基础组件转换的准确性，加速 1.0 版本的迭代并保障编译器质量。
 
 ## 项目结构
 
@@ -28,6 +37,22 @@
 |-- README.md                     # 项目说明文档
 |-- LICENSE                       # 项目许可证文件（如果有的话）
 ```
+
+## 进度节点
+
+### 1.0（已完成）
+
+如下图，将左侧 Rax 中（除 Link 的 7 个）基础组件，在 Taro 中优先寻找平替组件。
+
+通过增加转换规则 `Transformers/JSXElementsTransformer/xxx` 抹平差异，如果找不到对应功能就标红，等后续对特例地统一处理。
+
+<p align="left">
+<img src=https://github.com/Trade-Offf/PictureBed/blob/main/imgs/Rax2Taro%20-%201.0.png?raw=true width=600 />
+</p>
+
+### 2.0（进行中）
+
+（...TODO）
 
 ## 自动化测试
 
@@ -79,3 +104,9 @@ npm run dev:h5
 ### 执行自动化测试
 
 命令行执行：`npm run test:e2e`
+
+## 支持
+
+- 🌟 若您对 Rax2Taro 项目感兴趣，请在 GitHub 上给我们点个星！同时，如果您认为它很有用，欢迎 👏🏻 向您的朋友推荐。
+- 📘 关注我的稀土掘金主页： [狂炫冰美式](https://juejin.cn/user/1591748568038823)，您将发现更多有趣的技术文章与博客。
+- 😊 希望您在使用 Rax2Taro 的过程中，能感受到探索新技术的乐趣，愿我们更高处相见。
