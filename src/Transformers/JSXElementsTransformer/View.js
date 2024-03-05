@@ -1,4 +1,3 @@
-// Transformers/JSXElementsTransformer/View.js
 const t = require("@babel/types");
 
 function transformViewElement(path) {
@@ -6,7 +5,6 @@ function transformViewElement(path) {
   if (path.node.openingElement && path.node.openingElement.name) {
     const openingElementName = path.node.openingElement.name;
 
-    // 现在我们可以安全地检查名字是否为 "View"
     if (
       t.isJSXIdentifier(openingElementName) &&
       openingElementName.name === "View"
@@ -14,6 +12,7 @@ function transformViewElement(path) {
       path.node.openingElement.attributes.forEach((attribute) => {
         if (t.isJSXAttribute(attribute) && attribute.name) {
           const attributeName = attribute.name.name;
+
           switch (attributeName) {
             case "onClick":
               attribute.name.name = "onTap";
@@ -21,7 +20,6 @@ function transformViewElement(path) {
             case "onLongpress":
               attribute.name.name = "onLongTap";
               break;
-            // 可以在这里添加任何其他特定于 View 的属性转换
           }
         }
       });
