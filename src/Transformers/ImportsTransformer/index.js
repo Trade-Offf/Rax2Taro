@@ -1,4 +1,3 @@
-// src/Transformers/ImportsTransformer/index.js
 const t = require("@babel/types");
 
 // 定义基础组件映射表，用于存储组件名及其对应的新导入信息
@@ -36,6 +35,10 @@ const componentImportMap = {
 
 const taroComponentsToImport = new Set();
 
+/**
+ * 转换导入声明，删除指定的导入映射组件名
+ * @param {Object} path - 表示导入声明的路径对象
+ */
 function transformImportDeclaration(path) {
   const importSource = path.node.source.value;
 
@@ -61,6 +64,10 @@ function transformImportDeclaration(path) {
   }
 }
 
+/**
+ * 添加 Taro 导入声明到 AST
+ * @param {Object} ast - 抽象语法树（AST）对象
+ */
 function addTaroImportDeclaration(ast) {
   if (taroComponentsToImport.size > 0) {
     const importSpecifiers = Array.from(taroComponentsToImport).map(

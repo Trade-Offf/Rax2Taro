@@ -1,8 +1,7 @@
-// src/Transformers/index.js
-const jsxElementTransformers = require("./JSXElementsTransformer");
-const functionTransformer = require("./FunctionTransformer");
-const importsTransformer = require("./ImportsTransformer");
 const traverse = require("@babel/traverse").default;
+const importsTransformer = require("./ImportsTransformer");
+const functionTransformer = require("./FunctionTransformer");
+const jsxElementTransformers = require("./JSXElementsTransformer");
 
 function transform(ast) {
   traverse(ast, {
@@ -21,6 +20,7 @@ function transform(ast) {
     },
     // ... 添加其他节点类型的转换规则
   });
+
   // 在 AST 遍历完成之后添加统一的 Taro 导入声明
   importsTransformer.addTaroImportDeclaration(ast);
 }
