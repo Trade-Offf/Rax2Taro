@@ -15,7 +15,7 @@
 
 将你待转换的单个 Rax.js 文件放在 InPut 文件夹下，命令行执行 `npm start` , 即可在 OutPut 文件夹中查看到转换后的 Taro.js 文件
 
-API 详情：[点击查看语雀文档]('https://www.yuque.com/cascading/bwnowo/uwp3s510g0im9ue9')
+API 详情 [点击查看语雀文档](https://www.yuque.com/cascading/bwnowo/uwp3s510g0im9ue9)
 
 ![组件属性方法差异比对](https://github.com/user-attachments/assets/9cddc37c-e86e-45c2-87dd-a7a51520e00a)
 
