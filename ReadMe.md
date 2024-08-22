@@ -13,8 +13,9 @@
 
 ## 使用方法
 
-将你待转换的单个 Rax.js 文件放在 InPut 文件夹下，命令行执行 `npm start` , 即可在 OutPut 文件夹中查看到转换后的 Taro.js 文件
-
+1. 将你待转换的单个 Rax.js 文件放在 InPut 文件夹下
+2. 命令行执行 `npm start` 
+3. 即可在 OutPut 文件夹中查看到转换后的 Taro.js 文件
 
 ## 项目结构
 
@@ -48,11 +49,16 @@
 |-- LICENSE                       # 项目许可证文件（如果有的话）
 ```
 
-## 自动化测试
+## 工作流程
 
-用 Jest 搭建一个端到端测试环境，该环境将链接 Rax 和 Taro 项目，自动执行组件代码的转换。
+用 Jest 搭建一个测试环境，该环境将链接 Rax 和 Taro 项目，自动执行组件代码的转换。
 
 这个过程将减少手动复制粘贴的需求，并帮助确保代码的一致性和正确性。
+
+<p align="center">
+    <img src=https://github.com/user-attachments/assets/7c859e36-cc1c-4fe4-9f94-82a15f64ceb2 width=520/>
+    <p align="center">工作原理</p>
+</p>
 
 具体步骤如下，在 `e2e.test.js` 中：
 
@@ -110,7 +116,7 @@ npm run dev:h5
 通过增加转换规则 `Transformers/JSXElementsTransformer/xxx` 抹平差异，如果找不到对应功能就标红，等后续对特例地统一处理。
 
 <p align="left">
-<img src=https://github.com/Trade-Offf/PictureBed/blob/main/imgs/Rax2Taro%20-%201.0.png?raw=true width=600 />
+    <img src=https://github.com/Trade-Offf/PictureBed/blob/main/imgs/Rax2Taro%20-%201.0.png?raw=true width=520 />
 </p>
 
 API 详情 [点击查看语雀文档](https://www.yuque.com/cascading/bwnowo/uwp3s510g0im9ue9)
