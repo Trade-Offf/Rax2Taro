@@ -28,9 +28,14 @@
 |   |   |-- /ImportsTransformer   # 负责导入语句的转换逻辑
 |   |   |   └-- index.js
 |   |   |-- /JSXElementsTransformer # 负责 JSX 元素的转换逻辑
-|   |   |   |-- Text.js
+|   |   |   |-- index.js
 |   |   |   |-- View.js
-|   |   |   └-- index.js
+|   |   |   |-- Text.js
+|   |   |   |-- Icon.js
+|   |   |   |-- Image.js
+|   |   |   |-- Picture.js
+|   |   |   |-- TextInput.js
+|   |   |   └-- Video.js
 |   |   └-- index.js              # 转换器主入口，执行协调转换过程
 |   |-- generator.js              # 生成器，用于从修改后的 AST 生成新的源代码
 |   └-- parser.js                 # 解析器，用于解析源代码生成 AST
