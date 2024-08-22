@@ -115,7 +115,7 @@ npm run dev:h5
 
 API 详情 [点击查看语雀文档](https://www.yuque.com/cascading/bwnowo/uwp3s510g0im9ue9)
 
-![组件属性方法差异比对](https://github.com/user-attachments/assets/9cddc37c-e86e-45c2-87dd-a7a51520e00a)
+![组件属性方法差异比对](https://github.com/user-attachments/assets/50c16041-717a-4d46-979f-b9b4b10cbe56)
 
 ### 2.0（进行中）
 
